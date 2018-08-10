@@ -18,9 +18,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/jokeButton"
         android:layout_below="@+id/instructions_text_view"
         android:onClick="tellJoke"
         android:text="@string/button_text" />
+
+    <ProgressBar
+        android:id="@+id/progressindicator"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/jokeButton"
+        android:visibility="gone" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

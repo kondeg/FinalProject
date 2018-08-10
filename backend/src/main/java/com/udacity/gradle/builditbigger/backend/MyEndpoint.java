@@ -6,24 +6,25 @@ import com.google.api.server.spi.config.ApiNamespace;
 
 import javax.inject.Named;
 
+import buildit.kondeg.udacity.edu.jokeprovider.JokeProvider;
+
 /** An endpoint class we are exposing */
 @Api(
         name = "myApi",
         version = "v1",
         namespace = @ApiNamespace(
-                ownerDomain = "backend.builditbigger.gradle.udacity.com",
-                ownerName = "backend.builditbigger.gradle.udacity.com",
+                ownerDomain = "backend.buildit.kondeg.udacity.edu",
+                ownerName = "backend.buildit.kondeg.udacity.edu",
                 packagePath = ""
         )
 )
 public class MyEndpoint {
 
     /** A simple endpoint method that takes a name and says Hi back */
-    @ApiMethod(name = "sayHi")
-    public MyBean sayHi(@Named("name") String name) {
+    @ApiMethod(name = "getJoke")
+    public MyBean getJoke() {
         MyBean response = new MyBean();
-        response.setData("Hi, " + name);
-
+        response.setData(JokeProvider.getJoke());
         return response;
     }
 
