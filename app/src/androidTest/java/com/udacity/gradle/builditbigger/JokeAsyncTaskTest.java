@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.AndroidTestCase;
 import android.util.Log;
+import android.widget.ProgressBar;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import java.util.concurrent.ExecutionException;
@@ -19,7 +21,8 @@ public class JokeAsyncTaskTest extends AndroidTestCase {
     @Test
     public void testJokeAsyncTask() {
         Context context = mock(Context.class);
-        JokeAsyncTask task = new JokeAsyncTask(context);
+        ProgressBar progressBar = mock(ProgressBar.class);
+        JokeAsyncTask task = new JokeAsyncTask(context, progressBar);
         task.execute();
         String response = null;
         try {
