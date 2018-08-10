@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(@Nullable String joke) {
             if (joke==null) {
-                Toast.makeText(context, "Error getting joke", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString(R.string.jokeError), Toast.LENGTH_SHORT).show();
                 return;
             }
             if (mProgressBar != null) {

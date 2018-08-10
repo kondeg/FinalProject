@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(@Nullable final String joke) {
             if (joke==null) {
-                Toast.makeText(context, "Error getting joke", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString(R.string.jokeError), Toast.LENGTH_SHORT).show();
                 return;
             }
             if (mProgressBar != null) {
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             mInterstitialAd = new InterstitialAd(context);
-            mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+            mInterstitialAd.setAdUnitId(context.getResources().getString(R.string.InterstitialAdId));
             mInterstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdLoaded() {
