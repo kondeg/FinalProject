@@ -44,7 +44,6 @@ public class JokeAsyncTask extends AsyncTask<Void, Void, String> {
                     // - turn off compression when running against local devappserver
                     //.setApplicationName("backend-212722")
                     .setRootUrl("https://backend-212722.appspot.com/_ah/api/")
-                    // .setRootUrl("http://backend-212722.appspot.com/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {

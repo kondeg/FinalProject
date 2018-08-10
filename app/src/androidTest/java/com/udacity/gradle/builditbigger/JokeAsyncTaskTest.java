@@ -29,7 +29,7 @@ public class JokeAsyncTaskTest extends AndroidTestCase {
             response = task.get(5, TimeUnit.SECONDS);
             Log.i(LOG_TAG, response);
         } catch (InterruptedException e) {
-            Log.e(LOG_TAG, e.getMessage());
+            Log.e(LOG_TAG, e.getMessage()); 
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
