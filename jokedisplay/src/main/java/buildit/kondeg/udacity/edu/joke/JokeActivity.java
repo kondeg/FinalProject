@@ -19,7 +19,10 @@ public class JokeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_joke);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        String joke = getIntent().getStringExtra(JokeConstants.intentJoke);
+        String joke = null;
+        if (getIntent().hasExtra(JokeConstants.intentJoke)) {
+            joke = getIntent().getStringExtra(JokeConstants.intentJoke);
+        }
         TextView textViewJoke = (TextView) findViewById(R.id.joke_text);
         textViewJoke.setText(joke);
 

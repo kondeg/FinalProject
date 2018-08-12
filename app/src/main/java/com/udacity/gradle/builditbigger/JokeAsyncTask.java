@@ -5,8 +5,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -19,7 +17,7 @@ public class JokeAsyncTask extends AsyncTask<Void, Void, String> {
     protected ProgressBar mProgressBar;
     protected static MyApi myApiService = null;
     protected Context context;
-    protected InterstitialAd mInterstitialAd;
+
 
     public JokeAsyncTask(Context context, ProgressBar progressBar) {
         this.context = context;

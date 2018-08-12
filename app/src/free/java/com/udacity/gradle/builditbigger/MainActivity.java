@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     class JokeGetter extends JokeAsyncTask {
 
+        private InterstitialAd mInterstitialAd;
+
         public JokeGetter(Context context, ProgressBar progressBar) {
             super(context, progressBar);
         }
